@@ -310,7 +310,7 @@ $ find ./technical -name "*ab*"
 ./technical/government/Media/fight_domestic_abuse.txt
 ./technical/government/Media/not_accessible_to_disabled.txt
 ````
-![findname](lab3-findPname.png)
+![findname](lab3-findname.png)
 
 **find -type d**: find all the dictionary in the given path and their sub dictionaries
 ````md
@@ -342,7 +342,7 @@ $ find ./technical/government -type d
 ./technical/government/Media
 ./technical/government/Post_Rate_Comm
 ````
-![findtyped](lab3-typed.png)
+![findtyped](lab3-findtyped.png)
 
 **find -maxdepth** : find things such as file, dictionary, in the maxdepth of N in a dictionary
 ````md
@@ -386,4 +386,4 @@ $ find ./technical -maxdepth 2 -type f -name "*030*"
 ./technical/plos/journal.pbio.0030137.txt
 ./technical/plos/pmed.0010030.txt
 ````
-![findmaxp](lab3-findmaxp.png)
+![findmaxp](lab3-findname.png)
