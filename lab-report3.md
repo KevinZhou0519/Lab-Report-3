@@ -280,7 +280,7 @@ $ find -P ./technical -name "*pa*"
 ./technical/government/Media/Legal_Aid_campaign.txt
 ./technical/government/Post_Rate_Comm/Cohenetal_comparison.txt
 ````
-![findL](lab3-findL.png)
+![findP](lab3-findP.png)
 
 **find -name**: it find the specifc name file in a directory
 
