@@ -30,7 +30,7 @@ public class ArrayExamples {
 }
 ````
 
-**failure**
+**Success**
 ````md
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -89,8 +89,9 @@ Time: 0.018
 
 OK (6 tests)
 
+![suc](lab2_2nd.png)
 ````
-**success**
+**Failure**
 ````md
 
   @Test
@@ -168,6 +169,8 @@ FAILURES!!!
 Tests run: 3,  Failures: 3
 
 ````
+
+
 
 
 
