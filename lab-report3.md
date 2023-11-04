@@ -1,3 +1,7 @@
+
+
+
+
 Code:
 public class ArrayExamples {
   // Changes the input array to be in reversed order
@@ -39,32 +43,4 @@ public class ArrayExamples {
 
 
 
-
-public String handleRequest(URI url) {
-    if (url.getPath().equals("/")) {
-        return return_string;
-    } 
-    else if (url.getPath().equals("/add-message")) {
-        String[] parameters1 = url.getQuery().split("=");
-        if (parameters1[0].equals("s")) {
-            if(parameters1[1].equals("<string>")){
-                 num+=1;
-                 return return_string;
-            }
-            else{
-                if(num != 0){   
-                    return_string += String.format("%d. %s",num, parameters1[1]) + "\n";
-                    num++;
-                    return return_string;
-                }
-            }  
-        }
-        return "404 Not Found!";
-        
-    } 
-    else {
-        
-        return "404 Not Found!";
-    }
-}
 
