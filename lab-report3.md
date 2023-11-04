@@ -90,7 +90,7 @@ Time: 0.018
 
 OK (6 tests)
 ````
-![suc](lab3_suc.png)
+![suc](lab-report3-suc.png)
 
 
 **Failure**
@@ -170,7 +170,7 @@ java.lang.AssertionError: expected:<4.5> but was:<3.0>
 FAILURES!!!
 Tests run: 3,  Failures: 3
 ````
-![fail](lab2_fail.png)
+![fail](lab-report2-fail.png)
 
 
 
