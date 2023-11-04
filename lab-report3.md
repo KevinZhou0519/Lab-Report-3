@@ -1,3 +1,4 @@
+**Code Before**
 ````md
 public class ArrayExamples {
 
@@ -89,7 +90,7 @@ Time: 0.018
 
 OK (6 tests)
 
-![suc](lab2_2nd.png)
+![suc](lab3_suc.png)
 ````
 **Failure**
 ````md
@@ -167,7 +168,7 @@ java.lang.AssertionError: expected:<4.5> but was:<3.0>
 
 FAILURES!!!
 Tests run: 3,  Failures: 3
-
+![fail](lab2_fail.png)
 ````
 
 
