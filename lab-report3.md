@@ -37,6 +37,8 @@ public class ArrayExamples {
 }
 
 
+
+
 public String handleRequest(URI url) {
     if (url.getPath().equals("/")) {
         return return_string;
