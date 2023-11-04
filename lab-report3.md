@@ -386,4 +386,4 @@ $ find ./technical -maxdepth 2 -type f -name "*030*"
 ./technical/plos/journal.pbio.0030137.txt
 ./technical/plos/pmed.0010030.txt
 ````
-![findmaxp](lab3-findname.png)
+![findmaxp](lab3-findmaxp.png)
