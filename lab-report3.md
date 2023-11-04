@@ -1,3 +1,6 @@
+**Part 1**-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 **Code Before**
 ````md
 public class ArrayExamples {
@@ -219,10 +222,16 @@ public class ArrayExamples {
   }
 
 
-}
+} 
 
 ````
+**reverseInPlace**: This method changes it's element in the first place to last place, the second to last-1 place. When it get to the second half of the array, it will have the same element as before because the first half has already been changed. One solution is to store the reversed array in another array and let the original array equal to the reversed array.
 
+**reversed**: This method let empty array as every element of the original array therefore, we will return an empty array. One solution is to assign the empty array equal to the original array from the back to get the reversed array.
+
+**averageWithoutLowest**: If there are two lowest number, then the array need to minus 2 at the end. However, it only minus1, which assume there are one lowest number everytime. Therefore, we can count how many lowest number in the for loop and divide sum by that instead of array length-1
+
+**Part 2**-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
