@@ -2,7 +2,7 @@
 
 
 
-
+````md
 public class ArrayExamples {
 
   static void reverseInPlace(int[] arr) {
@@ -33,7 +33,7 @@ public class ArrayExamples {
   }
 }
 
-
+````
 
 
 
