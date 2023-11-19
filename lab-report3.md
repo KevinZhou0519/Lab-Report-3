@@ -1,4 +1,4 @@
-# Part1
+# Part 1
 
 
 
@@ -34,7 +34,7 @@ Time: 0.008
 
 OK (1 test)
 ````
-![suc](lab-report3-suc.png)
+![suc](lab3-s.png)
 
 
 **Failure**
@@ -76,7 +76,7 @@ Caused by: java.lang.AssertionError: expected:<3> but was:<5>
 FAILURES!!!
 Tests run: 1,  Failures: 1
 ````
-![fail](lab-report2-fail.png)
+![fail](lab3-f.png)
 
 **After change**
 ````md
@@ -91,56 +91,21 @@ public class ArrayExamples {
     for(int i = 0;i<newArray.length;i++){
         arr[i] = newArray[i];
     }
-    
   }
-
-  // Returns a *new* array with all the elements of the input array in reversed
-  // order
-  static int[] reversed(int[] arr) {
-    int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1) {
-      newArray[i] = arr[arr.length - i - 1];
-    }
-    return newArray;
-  }
-
-  // Averages the numbers in the array (takes the mean), but leaves out the
-  // lowest number when calculating. Returns 0 if there are no elements or just
-  // 1 element in the array
-  static double averageWithoutLowest(double[] arr) {
-    int count = 0;
-    if(arr.length < 2) { return 0.0; }
-    double lowest = arr[0];
-    for(double num: arr) {
-      if(num < lowest) { lowest = num; }
-    }
-    double sum = 0;
-    for(double num: arr) {
-      if(num != lowest) { 
-        sum += num; 
-        count++;
-      }
-    }
-    return sum / (count);
-  }
-
-
 } 
 
 ````
-**reverseInPlace**: This method changes it's element in the first place to last place, the second to last-1 place. When it get to the second half of the array, it will have the same element as before because the first half has already been changed. One solution is to store the reversed array in another array and let the original array equal to the reversed array.
-
-**reversed**: This method let empty array as every element of the original array therefore, we will return an empty array. One solution is to assign the empty array equal to the original array from the back to get the reversed array.
-
-**averageWithoutLowest**: If there are two lowest number, then the array need to minus 2 at the end. However, it only minus1, which assume there are one lowest number everytime. Therefore, we can count how many lowest number in the for loop and divide sum by that instead of array length-1
+**reverseInPlace**: This method changes its element in the first place to last place, the second to last-1 place, and so on. Before the change, the method changes its element on itself, making the first half of the array become the inverse of the second half. However, if we want to change the second half of the array and make it the inverse of the first half, we are considering the first half of the array. The first half of the array is already equal to the inverse  When it gets to the second half of the array, it will have the same element as before because the first half has already been changed. One solution is storing the reversed array in another array and letting the original array equal the reversed one. In the code after change, I create another "newArray" and store the inverse Arrayinsde, then I do another for loop to make every element of the original array "arr" equal to the "newArray". This will not make the inverse to repeat itself because I stored all of the inverse "arr" into the "newArray"
 
 
 
+# Part 2
 
-**Part 2**--------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**find -P**: it is used as a defult find statement. There is no difference between directly using find and find-p
 ````md
+find -P: There is no difference between directly using `find` and `find -P` if we do not include the symbolic link. If there is a symbolic link referring to a file or dictionary, the find -P will not get into that symbolic link while `find` will. This can be useful if we do not want to include any symbolic link in our search.
+
+//find the file in "technical" include "pemed.00202" 
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find -P ./technical -name "pmed.00202*"
 ./technical/plos/pmed.0020200.txt
@@ -174,6 +139,9 @@ $ find -P ./technical -name "pmed.00202*"
 ./technical/plos/pmed.0020278.txt
 ./technical/plos/pmed.0020281.txt
 
+
+
+//find the file in "technical" include "pa"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find -P ./technical -name "*pa*"
 ./technical/government/Media/agency_expands.txt
@@ -183,9 +151,12 @@ $ find -P ./technical -name "*pa*"
 ````
 ![findP](lab3-findP.png)
 
-**find -name**: it find the specifc name file in a directory
+
 
 ````md
+find -name: it find the specifc name file in a directory. This can be very useful if we want to find files that contain one specific name in tons of files in a dictionary.
+
+//find the file in "technical" include "chapter"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -name "chapter*"
 ./technical/911report/chapter-1.txt
@@ -205,6 +176,8 @@ $ find ./technical -name "chapter*"
 ./technical/911report/chapter-8.txt
 ./technical/911report/chapter-9.txt
 
+
+// find files in "technical" include "ab"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -name "*ab*"
 ./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
@@ -213,8 +186,11 @@ $ find ./technical -name "*ab*"
 ````
 ![findname](lab3-findname.png)
 
-**find -type d**: find all the dictionary in the given path and their sub dictionaries
+
 ````md
+find -type d: find all the dictionary in the given path and their sub-dictionaries. If there are many paths in a dictionary and you want to know the dictionaries you want to find are in which path, then this method will be very useful
+
+//find all of the dictionary in "technical"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -type d
 ./technical
@@ -229,10 +205,14 @@ $ find ./technical -type d
 ./technical/government/Post_Rate_Comm
 ./technical/plos
 
+
+//find all of the dictionaries in "biomed" in "technical"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical/biomed -type d
 ./technical/biomed
 
+
+//find all of the dictionaries in "government" in "technical"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical/government -type d
 ./technical/government
@@ -245,8 +225,12 @@ $ find ./technical/government -type d
 ````
 ![findtyped](lab3-findtyped.png)
 
-**find -maxdepth** : find things such as file, dictionary, in the maxdepth of N in a dictionary
+
 ````md
+find -maxdepth : find things such as a file, and dictionary, in the max depth of N in a dictionary. This is particularly useful when there are so many files or dictionary and we only want to find dictionary or files in the depth of N
+
+
+// find all of the dictionaries that search in to maximum of depth 2 in "technical"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -maxdepth 2 -type d
 ./technical
@@ -261,6 +245,8 @@ $ find ./technical -maxdepth 2 -type d
 ./technical/government/Post_Rate_Comm
 ./technical/plos
 
+
+// find all of the files that search into a maximum of depth 2 in "technical" include the name "030"
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -maxdepth 2 -type f -name "*030*"
 ./technical/biomed/gb-2001-2-8-research0030.txt
