@@ -103,9 +103,12 @@ public class ArrayExamples {
 
 
 ````md
-find -P: There is no difference between directly using `find` and `find -P` if we do not include the symbolic link. If there is a symbolic link referring to a file or dictionary, the find -P will not get into that symbolic link while `find` will. This can be useful if we do not want to include any symbolic link in our search.
+find -P: There is no difference between directly using `find` and `find -P`
+if we do not include the symbolic link. If there is a symbolic link referring to a
+file or dictionary, the find -P will not get into that symbolic link while `find`
+will. This can be useful if we do not want to include any symbolic link in our search.
 
-//find the file in "technical" include "pemed.00202" 
+//find the file in `technical` include `pemed.00202`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find -P ./technical -name "pmed.00202*"
 ./technical/plos/pmed.0020200.txt
@@ -141,7 +144,7 @@ $ find -P ./technical -name "pmed.00202*"
 
 
 
-//find the file in "technical" include "pa"
+//find the file in `technical` include `pa`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find -P ./technical -name "*pa*"
 ./technical/government/Media/agency_expands.txt
@@ -154,9 +157,10 @@ $ find -P ./technical -name "*pa*"
 
 
 ````md
-find -name: it find the specifc name file in a directory. This can be very useful if we want to find files that contain one specific name in tons of files in a dictionary.
+find -name: it find the specifc name file in a directory. This can be very useful if
+we want to find files that contain one specific name in tons of files in a dictionary.
 
-//find the file in "technical" include "chapter"
+//find the file in `technical` include `chapter`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -name "chapter*"
 ./technical/911report/chapter-1.txt
@@ -177,7 +181,7 @@ $ find ./technical -name "chapter*"
 ./technical/911report/chapter-9.txt
 
 
-// find files in "technical" include "ab"
+// find files in `technical` include `ab`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -name "*ab*"
 ./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
@@ -188,9 +192,11 @@ $ find ./technical -name "*ab*"
 
 
 ````md
-find -type d: find all the dictionary in the given path and their sub-dictionaries. If there are many paths in a dictionary and you want to know the dictionaries you want to find are in which path, then this method will be very useful
+find -type d: find all the dictionary in the given path and their sub-dictionaries.
+If there are many paths in a dictionary and you want to know the dictionaries you
+want to find are in which path, then this method will be very useful
 
-//find all of the dictionary in "technical"
+//find all of the dictionary in `technical`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -type d
 ./technical
@@ -206,13 +212,13 @@ $ find ./technical -type d
 ./technical/plos
 
 
-//find all of the dictionaries in "biomed" in "technical"
+//find all of the dictionaries in `biomed` in `technical`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical/biomed -type d
 ./technical/biomed
 
 
-//find all of the dictionaries in "government" in "technical"
+//find all of the dictionaries in `government` in `technical`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical/government -type d
 ./technical/government
@@ -227,10 +233,12 @@ $ find ./technical/government -type d
 
 
 ````md
-find -maxdepth : find things such as a file, and dictionary, in the max depth of N in a dictionary. This is particularly useful when there are so many files or dictionary and we only want to find dictionary or files in the depth of N
+find -maxdepth : find things such as a file, and dictionary, in the max depth
+of N in a dictionary. This is particularly useful when there are so many files
+or dictionary and we only want to find dictionary or files in the depth of N
 
 
-// find all of the dictionaries that search in to maximum of depth 2 in "technical"
+// find all of the dictionaries that search in to maximum of depth 2 in `technical`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -maxdepth 2 -type d
 ./technical
@@ -246,7 +254,7 @@ $ find ./technical -maxdepth 2 -type d
 ./technical/plos
 
 
-// find all of the files that search into a maximum of depth 2 in "technical" include the name "030"
+// find all of the files that search into a maximum of depth 2 in `technical` include the name `030`
 KIDKV@DESKTOP-I09QJL7 MINGW64 ~/docsearch (main)
 $ find ./technical -maxdepth 2 -type f -name "*030*"
 ./technical/biomed/gb-2001-2-8-research0030.txt
